@@ -11,12 +11,37 @@
 		8DE0A100254C3147001B44A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A0FF254C3147001B44A2 /* AppDelegate.swift */; };
 		8DE0A102254C3147001B44A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A101254C3147001B44A2 /* SceneDelegate.swift */; };
 		8DE0A104254C3147001B44A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A103254C3147001B44A2 /* ViewController.swift */; };
-		8DE0A107254C3147001B44A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A105254C3147001B44A2 /* Main.storyboard */; };
 		8DE0A109254C314C001B44A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A108254C314C001B44A2 /* Assets.xcassets */; };
 		8DE0A10C254C314C001B44A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A10A254C314C001B44A2 /* LaunchScreen.storyboard */; };
 		8DE0A114254C3DFD001B44A2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A113254C3DFD001B44A2 /* Constraints.swift */; };
 		8DE0A118254C3EC0001B44A2 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A117254C3EC0001B44A2 /* UIView+Constraints.swift */; };
+		8DE0A120254C4EE1001B44A2 /* PrettyConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE0A0ED254C2E48001B44A2 /* PrettyConstraints.framework */; };
+		8DE0A121254C4EE1001B44A2 /* PrettyConstraints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE0A0ED254C2E48001B44A2 /* PrettyConstraints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DE0A122254C4EE1001B44A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DE0A0E4254C2E48001B44A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DE0A0EC254C2E48001B44A2;
+			remoteInfo = PrettyConstraints;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DE0A124254C4EE1001B44A2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8DE0A121254C4EE1001B44A2 /* PrettyConstraints.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8DE0A0ED254C2E48001B44A2 /* PrettyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrettyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,7 +51,6 @@
 		8DE0A0FF254C3147001B44A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE0A101254C3147001B44A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8DE0A103254C3147001B44A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8DE0A106254C3147001B44A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DE0A108254C314C001B44A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE0A10B254C314C001B44A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE0A10D254C314C001B44A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE0A120254C4EE1001B44A2 /* PrettyConstraints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +83,7 @@
 				8DE0A0EF254C2E48001B44A2 /* PrettyConstraints */,
 				8DE0A0FE254C3147001B44A2 /* PrettyConstraintsExamples */,
 				8DE0A0EE254C2E48001B44A2 /* Products */,
+				8DE0A11F254C4EE1001B44A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +112,6 @@
 				8DE0A0FF254C3147001B44A2 /* AppDelegate.swift */,
 				8DE0A101254C3147001B44A2 /* SceneDelegate.swift */,
 				8DE0A103254C3147001B44A2 /* ViewController.swift */,
-				8DE0A105254C3147001B44A2 /* Main.storyboard */,
 				8DE0A108254C314C001B44A2 /* Assets.xcassets */,
 				8DE0A10A254C314C001B44A2 /* LaunchScreen.storyboard */,
 				8DE0A10D254C314C001B44A2 /* Info.plist */,
@@ -101,6 +126,13 @@
 				8DE0A117254C3EC0001B44A2 /* UIView+Constraints.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		8DE0A11F254C4EE1001B44A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,10 +174,12 @@
 				8DE0A0F9254C3147001B44A2 /* Sources */,
 				8DE0A0FA254C3147001B44A2 /* Frameworks */,
 				8DE0A0FB254C3147001B44A2 /* Resources */,
+				8DE0A124254C4EE1001B44A2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8DE0A123254C4EE1001B44A2 /* PBXTargetDependency */,
 			);
 			name = PrettyConstraintsExamples;
 			productName = PrettyConstraintsExamples;
@@ -203,7 +237,6 @@
 			files = (
 				8DE0A10C254C314C001B44A2 /* LaunchScreen.storyboard in Resources */,
 				8DE0A109254C314C001B44A2 /* Assets.xcassets in Resources */,
-				8DE0A107254C3147001B44A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,15 +264,15 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8DE0A105254C3147001B44A2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8DE0A106254C3147001B44A2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		8DE0A123254C4EE1001B44A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DE0A0EC254C2E48001B44A2 /* PrettyConstraints */;
+			targetProxy = 8DE0A122254C4EE1001B44A2 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		8DE0A10A254C314C001B44A2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
