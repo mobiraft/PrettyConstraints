@@ -14,6 +14,8 @@
 		8DE0A107254C3147001B44A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A105254C3147001B44A2 /* Main.storyboard */; };
 		8DE0A109254C314C001B44A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A108254C314C001B44A2 /* Assets.xcassets */; };
 		8DE0A10C254C314C001B44A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE0A10A254C314C001B44A2 /* LaunchScreen.storyboard */; };
+		8DE0A114254C3DFD001B44A2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A113254C3DFD001B44A2 /* Constraints.swift */; };
+		8DE0A118254C3EC0001B44A2 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE0A117254C3EC0001B44A2 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8DE0A108254C314C001B44A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DE0A10B254C314C001B44A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DE0A10D254C314C001B44A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DE0A113254C3DFD001B44A2 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		8DE0A117254C3EC0001B44A2 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			children = (
 				8DE0A0F0254C2E48001B44A2 /* PrettyConstraints.h */,
 				8DE0A0F1254C2E48001B44A2 /* Info.plist */,
+				8DE0A11C254C3F6A001B44A2 /* Classes */,
 			);
 			path = PrettyConstraints;
 			sourceTree = "<group>";
@@ -87,6 +92,15 @@
 				8DE0A10D254C314C001B44A2 /* Info.plist */,
 			);
 			path = PrettyConstraintsExamples;
+			sourceTree = "<group>";
+		};
+		8DE0A11C254C3F6A001B44A2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8DE0A113254C3DFD001B44A2 /* Constraints.swift */,
+				8DE0A117254C3EC0001B44A2 /* UIView+Constraints.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,7 @@
 				TargetAttributes = {
 					8DE0A0EC254C2E48001B44A2 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 					};
 					8DE0A0FC254C3147001B44A2 = {
 						CreatedOnToolsVersion = 12.1;
@@ -199,6 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE0A114254C3DFD001B44A2 /* Constraints.swift in Sources */,
+				8DE0A118254C3EC0001B44A2 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +376,7 @@
 		8DE0A0F6254C2E48001B44A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -375,6 +393,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiraft.PrettyConstraints;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,6 +402,7 @@
 		8DE0A0F7254C2E48001B44A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
