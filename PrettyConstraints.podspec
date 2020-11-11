@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "PrettyConstraints"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "PrettyConstraints helps you create your views programmatically."
   spec.description  = <<-DESC
   PrettyConstraints helps you create your views faster programmatically using AutoLayout constraints.
@@ -25,6 +25,6 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/mobiraft/PrettyConstraints.git", :tag => "#{spec.version}" }
 
-  spec.source_files  = "Classes", "PrettyConstraints/Classes/**/*.{h,m,swift}"
+  spec.source_files  = "Classes", "Sources/PrettyConstraints/Classes/**/*.{h,m,swift}"
   
 end

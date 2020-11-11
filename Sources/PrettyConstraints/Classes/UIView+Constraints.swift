@@ -5,6 +5,8 @@
 //  Created by Hardik Parmar on 30/10/20.
 //
 
+#if canImport(UIKit)
+
 import UIKit
 
 public extension UIView {
@@ -99,3 +101,5 @@ public extension UIView {
     }
 
 }
+
+#endif

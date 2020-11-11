@@ -2,7 +2,20 @@
 
 PrettyConstraints helps you create your views faster programmatically using AutoLayout constraints.
 
-## Example
+## Installation
+### CocoaPods
+PrettyConstraints is available through <a href="http://cocoapods.org/" rel="nofollow">CocoaPods</a>. To install it, simply add the following line to your Podfile:
+```
+pod 'PrettyConstraints'
+```
+### Manual Installation
+Download and include the `PrettyConstraints` folder and files in your codebase.
+
+### Requirements
+- iOS 11
+- Swift 5
+
+## How To Use
 ### Embedding View in another View:
 
 ```
@@ -47,13 +60,6 @@ let constraints:[NSLayoutConstraint] = subView.applyConstraints(.center(in: view
                                                                 .width(constant: 50),
                                                                 .height(constant: 50))
 constraints[1].constant = 20 // Modifies the width as 20.0
-```
-
-## Installation
-### CocoaPods
-PrettyConstraints is available through <a href="http://cocoapods.org/" rel="nofollow">CocoaPods</a>. To install it, simply add the following line to your Podfile:
-```
-pod 'PrettyConstraints'
 ```
 
 <!--<h2>Blog</h2>
