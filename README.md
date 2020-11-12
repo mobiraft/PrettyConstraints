@@ -4,9 +4,14 @@ PrettyConstraints helps you create your views faster programmatically using Auto
 
 ## Installation
 ### CocoaPods
-PrettyConstraints is available through <a href="http://cocoapods.org/" rel="nofollow">CocoaPods</a>. To install it, simply add the following line to your Podfile:
+Using <a href="http://cocoapods.org/" rel="nofollow">CocoaPods</a>, install it by adding the following line to your Podfile:
 ```
 pod 'PrettyConstraints'
+```
+### Swift Package Manager
+Using <a href="https://swift.org/package-manager/" rel="nofollow">Swift Package Manager</a>, add it as a Swift Package in Xcode 11.0 or later, `select File > Swift Packages > Add Package Dependency...` and add the repository URL:
+```
+https://github.com/mobiraft/PrettyConstraints
 ```
 ### Manual Installation
 Download and include the `PrettyConstraints` folder and files in your codebase.
@@ -62,18 +67,18 @@ let constraints:[NSLayoutConstraint] = subView.applyConstraints(.center(in: view
 constraints[1].constant = 20 // Modifies the width as 20.0
 ```
 
-<!--<h2>Blog</h2>
+<h2>Blog</h2>
 <ul>
-<li><a href="https://mobiraft.com/ios/swiftui/animations-in-swiftui/" rel="nofollow">Animations in SwiftUI</a></li>
- 
-</ul-->
+<li><a href="https://mobiraft.com/ios/create-app-without-storyboards-using-prettyconstraints/">Create app without Storyboards using PrettyConstraints | Mobiraft</a></li>
+<li><a href="https://medium.com/@hardikparmarj/ios-app-without-storyboards-using-prettyconstraints-ec8e7dd7df9d">iOS app without Storyboards using PrettyConstraints | by Hardik Parmar | Nov, 2020 | Medium</a></li>
+</ul>
 
 <h2>Contant us</h2>
 
-<a href="https://twitter.com/mobiraft" rel="nofollow">Twitter</a>
+<a href="https://twitter.com/mobiraft">Twitter</a>
 
 
 <h2>Website</h2>
 
 Visit us for more Android, SwiftUI and Swift articles.
-<a href="http://www.mobiraft.com/" rel="nofollow">www.mobiraft.com</a>
+<a href="http://www.mobiraft.com/">www.mobiraft.com</a>
