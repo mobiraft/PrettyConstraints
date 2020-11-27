@@ -100,6 +100,92 @@ public extension UIView {
         return appliedConstraint
     }
 
+    func fitInSuperview(insets: CGFloat = 0, relativeToSafeArea: Bool = false) {
+        guard let superView = self.superview else { return }
+        fitInView(superView, insets: insets, relativeToSafeArea: relativeToSafeArea)
+    }
+    
+    func fitInView(_ view: UIView, insets: CGFloat = 0, relativeToSafeArea: Bool = false) {
+        if relativeToSafeArea {
+            let view = view.safeAreaLayoutGuide
+            self.applyConstraints(.top(to: view.topAnchor, constant: insets),
+                                  .leading(to: view.leadingAnchor, constant: insets),
+                                  .trailing(to: view.trailingAnchor, constant: -insets),
+                                  .bottom(to: view.bottomAnchor, constant: -insets))
+        } else {
+            self.applyConstraints(.top(to: view.topAnchor, constant: insets),
+                                  .leading(to: view.leadingAnchor, constant: insets),
+                                  .trailing(to: view.trailingAnchor, constant: -insets),
+                                  .bottom(to: view.bottomAnchor, constant: -insets))
+        }
+    }
+    
+    enum StackViewConfiguration {
+        case axis(_ axis: NSLayoutConstraint.Axis)
+        case alignment(_ alignment: UIStackView.Alignment)
+        case spacing(_ spacing: CGFloat, after: UIView? = nil)
+        case distribution(_ distribution: UIStackView.Distribution)
+    }
+    
+    @discardableResult
+    func addStackView(with views: [UIView], configs: [StackViewConfiguration] = [], insets: CGFloat = 0) -> UIStackView {
+        let stackView = StackView(with: views, configs: configs)
+        self.addSubview(stackView)
+        stackView.fitInView(self, insets: insets)
+        return stackView
+    }
+    
+    @discardableResult
+    func addScrollView(with view: UIView, direction: NSLayoutConstraint.Axis, insets: CGFloat = 0) -> UIScrollView {
+        let scrollView = ScrollView(with: view, direction: direction)
+        self.addSubview(scrollView)
+        scrollView.fitInView(self, insets: insets)
+        return scrollView
+    }
+    
+}
+
+public func StackView(with views: [UIView], configs: [UIView.StackViewConfiguration] = []) -> UIStackView {
+    let stackView = UIStackView.init()
+    
+    for config in configs {
+        switch config {
+        case .alignment(let alignment):
+            stackView.alignment = alignment
+        case .axis(let axis):
+            stackView.axis = axis
+        case .spacing(let spacing, let afterView):
+            if let afterView = afterView {
+                stackView.setCustomSpacing(spacing, after: afterView)
+            } else {
+                stackView.spacing = spacing
+            }
+        case .distribution(let distribution):
+            stackView.distribution = distribution
+        }
+    }
+    
+    for view in views {
+        stackView.addArrangedSubview(view)
+    }
+    
+    return stackView
+}
+
+public func ScrollView(with view: UIView, direction: NSLayoutConstraint.Axis) -> UIScrollView {
+    let scrollView = UIScrollView()
+    scrollView.addSubview(view)
+    view.fitInView(scrollView)
+    
+    if direction == .horizontal {
+        view.applyConstraints(.height(to: scrollView.heightAnchor),
+                              .centerY(to: scrollView.centerYAnchor))
+    } else {
+        view.applyConstraints(.width(to: scrollView.widthAnchor),
+                              .centerX(to: scrollView.centerXAnchor))
+    }
+    
+    return scrollView
 }
 
 #endif
