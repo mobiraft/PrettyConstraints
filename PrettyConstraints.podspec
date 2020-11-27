@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "PrettyConstraints"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "PrettyConstraints helps you create your views programmatically."
   spec.description  = <<-DESC
   PrettyConstraints helps you create your views faster programmatically using AutoLayout constraints.
